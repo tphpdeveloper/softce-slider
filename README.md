@@ -1,4 +1,4 @@
-# Work with module create sitemap
+# Work with module slider
 
 **1.**
 ```php
@@ -34,22 +34,9 @@ composer update
 
 'providers' => [
     ... ,
-    Softce\Slider\SliderServiceProvider::class,
+    Softce\Slider\Providers\SliderServiceProvider::class,
 ]
 ```
 
 
-**4.**
-```php
-
-//write to file modules\mage2\ecommerce\src\AdminMenu\Provider.php in group System
-
-
-$sitemap = new AdminMenu();
-$sitemap->key('sitemap')
-    ->label('Сгенерировать SITEMAP')
-    ->route('admin.sitemap.create')
-    ->icon('fa-map');
-$systemMenu->subMenu('sitemap',$sitemap);
-```
 

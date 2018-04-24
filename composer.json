@@ -1,8 +1,6 @@
 {
     "name": "softce/slider",
-    "description": "create multiple sitemap from category products",
-    "type": "library",
-    "license": "MIT",
+    "description": "Module for working with the slider. Add, change images and text of the slide, as well as display the slider.",
     "authors": [
         {
             "name": "tphpdeveloper",
