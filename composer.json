@@ -1,0 +1,26 @@
+{
+    "name": "softce/slider",
+    "description": "create multiple sitemap from category products",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tphpdeveloper",
+            "email": "igorkutsan@ukr.net"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0",
+        "laravel/framework": "5.5.*"
+
+    },
+    "require-dev":{
+        "phpunit/phpunit": "*"
+    },
+    "autoload":{
+        "psr-4": {
+            "Softce\\Slider\\" : "vendor/softce/slider/"
+        }
+    }
+
+}
