@@ -39,4 +39,12 @@ composer update
 ```
 
 
+**4.**
+```php
+//for show page slider, in code add next row
+
+{{ route('admin.slider') }}
+
+```
+
 
