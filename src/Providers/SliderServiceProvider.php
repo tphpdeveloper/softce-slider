@@ -3,7 +3,6 @@
 namespace Softce\Slider\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Softce\Slider\Module\Slider ;
 
 
 class SliderServiceProvider extends ServiceProvider
