@@ -9,4 +9,6 @@ Route::group([
 
     Route::get('/', ['as' => 'admin.slider', 'uses' => 'SliderController@index']);
 
+    
+
 });
