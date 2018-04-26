@@ -38,8 +38,16 @@ composer update
 ]
 ```
 
-
 **4.**
+```php
+//To work with slides, start the migration
+
+php artisan migratre
+
+```
+
+
+**5.**
 ```php
 //for show page slider, in code add next row
 
