@@ -23,8 +23,14 @@ class SlideRequest extends Request
      */
     public function rules()
     {
-        return [
-            'new_slide' => 'mimes:png,jpeg,gif'
+        $rules = [
+            'new_slide' => 'image',
+            'text' => 'max:255'
         ];
+        if($this->slide) {
+            $rules['slide'] = 'image';
+        }
+
+        return $rules;
     }
 }
