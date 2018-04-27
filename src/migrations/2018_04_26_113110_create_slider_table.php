@@ -16,7 +16,7 @@ class CreateSliderTable extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('path', 255);
-            $table->string('text', 255);
+            $table->json('text')->nullable();
             $table->timestamps();
         });
     }

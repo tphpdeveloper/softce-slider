@@ -24,12 +24,13 @@ class SlideRequest extends Request
     public function rules()
     {
         $rules = [
-            'new_slide' => 'image',
-            'text' => 'max:255'
+            'new_slide' => 'min:1|array',
+            'text' => 'array|max:255',
+            //'text.'.app()->getLocale() => 'required',
         ];
-        if($this->slide) {
-            $rules['slide'] = 'image';
-        }
+//        if($this->slide) {
+//            $rules['slide'] = 'mimes:jpeg,jpg,png,gif';
+//        }
 
         return $rules;
     }
