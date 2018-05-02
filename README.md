@@ -36,13 +36,17 @@ composer update softce/slider
     ... ,
     Softce\Slider\Providers\SliderServiceProvider::class,
 ]
+
+
+// in console 
+php artisan config:cache
 ```
 
 **4.**
 ```php
 //To work with slides, start the migration
 
-php artisan migratre
+php artisan migrate
 
 ```
 
