@@ -15,7 +15,7 @@ class SliderServiceProvider extends ServiceProvider
 
         $slider = DB::table('admin_menus')->where('name', 'Слайдер')->first();
         if(is_null($slider)){
-            DB::table('admin_menus')->create([
+            DB::table('admin_menus')->insert([
                 'admin_menu_id' => 5,
                 'name' => 'Слайдер',
                 'icon' => 'fa-image',
