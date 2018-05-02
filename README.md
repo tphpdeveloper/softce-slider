@@ -59,4 +59,24 @@ php artisan migrate
 
 ```
 
+# For delete module
+
+```php
+//delete next row
+
+//in app.php
+Softce\Slider\Providers\SliderServiceProvider::class,
+
+//in composer.json
+"Softce\\Slider\\": "vendor/softce/slider/src"
+
+//in console
+composer remove softce/slider
+
+// delete -> bootstrap/config/cache.php
+
+//in console
+php artisan config:cache
+
+```
 
