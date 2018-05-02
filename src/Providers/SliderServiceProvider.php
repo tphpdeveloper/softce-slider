@@ -3,7 +3,7 @@
 namespace Softce\Slider\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use DB;
 
 class SliderServiceProvider extends ServiceProvider
 {
@@ -13,6 +13,16 @@ class SliderServiceProvider extends ServiceProvider
         $this->loadViewsFrom(dirname(__DIR__) . '\views', 'slider');
         $this->loadMigrationsFrom(dirname(__DIR__) . '/migrations');
 
+        $slider = DB::table('admin_menus')->where('name', 'Слайдер')->first();
+        if(is_null($slider)){
+            DB::table('admin_menus')->create([
+                'admin_menu_id' => 5,
+                'name' => 'Слайдер',
+                'icon' => 'fa-image',
+                'route' => 'admin.slider.index',
+                'o' => 0
+            ]);
+        }
     }
 
     public function register(){

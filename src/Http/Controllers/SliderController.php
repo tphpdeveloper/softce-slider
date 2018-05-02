@@ -3,10 +3,10 @@
 namespace Softce\Slider\Http\Controllers;
 
 use Mage2\Ecommerce\Http\Controllers\Admin\AdminController;
-use Mage2\Ecommerce\Models\Database\Lang;
 use Softce\Slider\Http\Requests\SlideRequest;
 use Softce\Slider\Module\Slider;
 use File;
+use DB;
 
 class SliderController extends AdminController
 {
@@ -24,6 +24,8 @@ class SliderController extends AdminController
      */
     public function index()
     {
+
+
         return view('slider::admin-slide')
             ->with('slides', Slider::all())
             ->with('path_slide', $this->path_slide);
