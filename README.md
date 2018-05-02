@@ -51,7 +51,7 @@ php artisan migratre
 ```php
 //for show page slider, in code add next row
 
-{{ route('admin.slider') }}
+{{ route('admin.slider.index') }}
 
 ```
 
