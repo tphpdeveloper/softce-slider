@@ -64,17 +64,22 @@ php artisan migrate
 ```php
 //delete next row
 
+**1.**
 //in app.php
 Softce\Slider\Providers\SliderServiceProvider::class,
 
+**2.**
 //in composer.json
 "Softce\\Slider\\": "vendor/softce/slider/src"
 
+**3.**
 //in console
 composer remove softce/slider
 
+**4.**
 // delete -> bootstrap/config/cache.php
 
+**5.**
 //in console
 php artisan config:cache
 
