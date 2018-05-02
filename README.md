@@ -14,7 +14,7 @@
     "sr-4": {
         ... ,
 
-        "Softce\\Slider\\" : "vendor/softce/slider/"
+        "Softce\\Slider\\" : "vendor/softce/slider/src"
     }
 }
 ```
