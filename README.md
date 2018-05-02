@@ -24,7 +24,7 @@
 ```php
 //in console write
 
-composer update
+composer update softce/slider
 ```
 
 
