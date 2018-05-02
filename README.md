@@ -11,7 +11,7 @@
 "autoload": {
     ... ,
 
-    "sr-4": {
+    "psr-4": {
         ... ,
 
         "Softce\\Slider\\" : "vendor/softce/slider/src"
