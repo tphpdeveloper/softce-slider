@@ -83,5 +83,13 @@ composer remove softce/slider
 //in console
 php artisan config:cache
 
+6.
+//delete table -> sliders
+
+7.
+//delete migration -> 2018_04_26_113110_create_slider_table
+
+8.
+//delete row in admin_menus table -> where name 'Слайдер'
 ```
 
