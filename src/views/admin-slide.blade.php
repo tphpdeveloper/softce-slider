@@ -23,7 +23,7 @@
 
         </div>
         <div class="box-body">
-            <table class="table table-striped">
+            <table class="table  table-hover options_table js-data_grid_table">
                 <thead>
                     <tr>
                         <th>№</th>

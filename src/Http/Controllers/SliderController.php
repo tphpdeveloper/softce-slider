@@ -3,7 +3,7 @@
 namespace Softce\Slider\Http\Controllers;
 
 use Mage2\Ecommerce\Http\Controllers\Admin\AdminController;
-use Softce\Slider\Http\Requests\SlideRequest;
+use Softce\Slider\Http\Requests\TypeRequest;
 use Softce\Slider\Module\Slider;
 use File;
 use DB;
@@ -33,10 +33,10 @@ class SliderController extends AdminController
 
     /**
      * Create new slide
-     * @param SlideRequest $request
+     * @param TypeRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(SlideRequest $request)
+    public function store(TypeRequest $request)
     {
         $new_slide = $request->file('new_slide');
 
@@ -57,11 +57,11 @@ class SliderController extends AdminController
 
     /**
      * Update slide
-     * @param SlideRequest $request
+     * @param TypeRequest $request
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(SlideRequest $request, $id)
+    public function update(TypeRequest $request, $id)
     {
         $slide = Slider::find($id);
         if($slide){
