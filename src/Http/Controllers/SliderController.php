@@ -67,16 +67,17 @@ class SliderController extends AdminController
         $slide = Slider::find($id);
         if($slide){
             $new_slide = $request->file('slide');
-            $slide->text = $request->text;
+            $data = $request->except(['_token', 'slide']);
+
 
             if($new_slide){
                 File::delete(public_path($this->path_slide.'/'.$slide->path));
 
                 $name_file = $new_slide->getClientOriginalName();
                 $new_slide->move(public_path($this->path_slide), $name_file);
-                $slide->path = $name_file;
+                $data['path'] = $name_file;
             }
-            $slide->save();
+            $slide->update($data);
 
             return redirect()->route('admin.slider.index')->with('notificationText', 'Слайд успешно обновлен');
         }
