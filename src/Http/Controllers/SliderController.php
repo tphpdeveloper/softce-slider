@@ -16,7 +16,7 @@ class SliderController extends AdminController
 
     public function __construct()
     {
-        $this->middleware(['admin.auth', 'main_lang']);
+        $this->middleware(['admin.auth']);
         $this->path_slide = 'uploads/slider';
     }
 
@@ -25,8 +25,6 @@ class SliderController extends AdminController
      */
     public function index()
     {
-
-
         return view('slider::admin-slide')
             ->with('slides', Slider::all())
             ->with('path_slide', $this->path_slide);

@@ -9,9 +9,10 @@ class Slider extends Model
 {
     use \Themsaid\Multilingual\Translatable;
 
-    protected $fillable = ['path', 'text'];
-    public $translatable = ['text'];
+    protected $fillable = ['path', 'title', 'text', 'url'];
+    public $translatable = ['title', 'text'];
     public $casts = [
+        'title' => 'array',
         'text' => 'array'
     ];
 }

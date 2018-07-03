@@ -28,14 +28,18 @@
                     <tr>
                         <th>№</th>
                         <th>Изображение</th>
+                        <th>Заголовок</th>
                         <th>Текст</th>
+                        <th>Ссылка</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                 @if($slides)
                     @foreach($slides as $co => $slide)
-                        <?php $model = $slide;?>
+                        @php
+                            $model = $slide;
+                        @endphp
                         <tr>
                             <td>{{ $co + 1 }}</td>
                             <td>
@@ -44,8 +48,8 @@
                             </td>
                             <td>
                                 @include('mage2-ecommerce::forms.textarea',[
-                                    'name' => 'text',
-                                    'label' => 'Текст',
+                                    'name' => 'title',
+                                    'label' => '',
                                     'attributes' => [
                                         'class' => 'ckeditor js-no_scroll',
                                         'lang' => true,
@@ -53,6 +57,27 @@
                                     ]
                                 ])
                             </td>
+                            <td>
+                                @include('mage2-ecommerce::forms.textarea',[
+                                    'name' => 'text',
+                                    'label' => '',
+                                    'attributes' => [
+                                        'class' => 'ckeditor js-no_scroll',
+                                        'lang' => true,
+                                        'form' => 'admin-slider-update-'.$slide->id
+                                    ]
+                                ])
+                            </td>
+                            <td>
+                                @include('mage2-ecommerce::forms.text',[
+                                    'name' => 'url',
+                                    'label' => '',
+                                    'attributes' => [
+                                        'form' => 'admin-slider-update-'.$slide->id
+                                    ]
+                                ])
+                            </td>
+
                             <td>
                                 {{--update slide info--}}
                                 <form id="admin-slider-update-{{ $slide->id }}" class="inline-form" method="POST"
